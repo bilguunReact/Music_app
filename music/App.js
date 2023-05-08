@@ -1,20 +1,24 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 import Ionic from 'react-native-vector-icons/Ionicons';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, TabActions } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreens from './screens/HomeScreen';
+
 import MusicScreen from './screens/MusicScreen';
 import LikeScreen from './screens/LikeScreen';
+import HomeScreen from './screens/HomeScreen';
+
+const DaavkaTunes = 'Home';
+const Tab = createBottomTabNavigator();
 
 export default function App() {
-  const Tab = createBottomTabNavigator();
+ 
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={({route}) => ({
+      <Tab.Navigator initialRouteName='DaavkaTunes' screenOptions={({route}) => ({
         tabBarIcon: ({focused, size, colour}) =>{
           let iconName;
-          if (route.name === 'Нүүр'){
+          if (route.name === DaavkaTunes){
             iconName = focused ? 'ios-home':'ios-home-outline';
           } 
           else if (route.name === 'Дуу'){
@@ -28,7 +32,7 @@ export default function App() {
         
       }
       )}>
-        <Tab.Screen name='Нүүр' component={HomeScreen}/>
+        <Tab.Screen name='DaavkaTunes' component={HomeScreen}/>
         <Tab.Screen name='Дуу' component={MusicScreen}/>
         <Tab.Screen name='Таалагдсан' component={LikeScreen}/>
       </Tab.Navigator>
