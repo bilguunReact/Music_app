@@ -3,7 +3,7 @@ import React from 'react'
 import Ionic from 'react-native-vector-icons/Ionicons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreens from './screens/HomeScreens';
+import HomeScreens from './screens/HomeScreen';
 import MusicScreen from './screens/MusicScreen';
 import LikeScreen from './screens/LikeScreen';
 
@@ -28,7 +28,7 @@ export default function App() {
         
       }
       )}>
-        <Tab.Screen name='Нүүр' component={HomeScreens}/>
+        <Tab.Screen name='Нүүр' component={HomeScreen}/>
         <Tab.Screen name='Дуу' component={MusicScreen}/>
         <Tab.Screen name='Таалагдсан' component={LikeScreen}/>
       </Tab.Navigator>

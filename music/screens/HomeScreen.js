@@ -102,9 +102,6 @@ const App = () => {
         </View>
         </View>
       </ScrollView>
-      <ScrollView>
-  
-      </ScrollView>
 
     </SafeAreaView>
   );
