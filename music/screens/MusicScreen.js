@@ -1,12 +1,29 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native'
+import React from 'react'
 
-export default function MusicScreen() {
+import Search from '../components/Search'
+import FlatList from '../components/FlatList'
+
+const MusicScreen = () => {
   return (
+    <SafeAreaView style={styles.con}>
+      <ScrollView>
     <View>
-      <Text>MusicScreen</Text>
-    </View>
+      </View>
+      <View>
+      <FlatList/>
+      </View>
+      </ScrollView>
+      </SafeAreaView>
+    
+
   )
 }
 
-const styles = StyleSheet.create({})
+export default MusicScreen
+
+const styles = StyleSheet.create({
+  con: {
+    flex: 1,
+  }
+})

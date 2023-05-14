@@ -7,6 +7,7 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
+  Pressable,
 } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import Onboarding from "react-native-onboarding-swiper";
@@ -63,7 +64,7 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView
-      style={{ flex: 1, backgroundColor: "#D3D3D3", paddingTop: 20 }}
+      style={{ flex: 1, backgroundColor: "#F4F6F7 ", paddingTop: 20 }}
     >
       <ScrollView>
         <View
@@ -110,10 +111,8 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
 
-
         <Text style={styles.uilchilgee}>Үйлчилгээнүүд</Text>
         <View style={styles.dood}>
-          
           <TouchableOpacity style={styles.hogjim}>
             <View style={styles.daavka}>
               <Image
@@ -125,7 +124,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
           <TouchableOpacity style={styles.hogjim}>
             <View style={styles.daavka}>
-            <Image
+              <Image
                 style={styles.tinyLogo}
                 source={require("../assets/logo.png")}
               />
@@ -134,45 +133,145 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.dood}>
-          {/* <Text style={styles.uilchilgee}>Үйлчилгээнүүд</Text> */}
-          <TouchableOpacity>
-            <View style={styles.daavka}>
-            <Image
+     
+        <Text style={styles.uilchilgee}>Шинээр нэмэгдсэн</Text>
+        <ScrollView style={styles.helbar} horizontal={true}>
+        
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
                 style={styles.tinyZurag}
                 source={require("../assets/p0bbrns9.jpg")}
               />
-            </View>
+              </View>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <View style={styles.daavka}>
-            <Image
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
                 style={styles.tinyZurag}
                 source={require("../assets/p0bbrns9.jpg")}
               />
-            </View>
+              </View>
           </TouchableOpacity>
-        </View>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/p0bbrns9.jpg")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/p0bbrns9.jpg")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/p0bbrns9.jpg")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/p0bbrns9.jpg")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/p0bbrns9.jpg")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/p0bbrns9.jpg")}
+              />
+              </View>
+          </TouchableOpacity>
+        </ScrollView>
 
-        <View style={styles.dood}>
-          {/* <Text style={styles.uilchilgee}>Үйлчилгээнүүд</Text> */}
-          <TouchableOpacity>
-            <View style={styles.daavka}>
-            <Image
+        <Text style={styles.uilchilgee}>Урсгал, төрөл</Text>
+        <ScrollView style={styles.helbar} horizontal={true}>
+        
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
                 style={styles.tinyZurag}
-                source={require("../assets/p0bbrns9.jpg")}
+                source={require("../assets/Six-1200-200522.png")}
               />
-            </View>
+              </View>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <View style={styles.daavka}>
-            <Image
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
                 style={styles.tinyZurag}
-                source={require("../assets/p0bbrns9.jpg")}
+                source={require("../assets/Six-1200-200522.png")}
               />
-            </View>
+              </View>
           </TouchableOpacity>
-        </View>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/Six-1200-200522.png")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/Six-1200-200522.png")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/Six-1200-200522.png")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/Six-1200-200522.png")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/Six-1200-200522.png")}
+              />
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.aaa}>
+            <View style={styles.guih}>
+              <Image
+                style={styles.tinyZurag}
+                source={require("../assets/Six-1200-200522.png")}
+              />
+              </View>
+          </TouchableOpacity>
+        </ScrollView>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -180,7 +279,6 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#DCDCDC",
   },
   useg: {
     backgroundColor: "#fff",
@@ -242,7 +340,6 @@ const styles = StyleSheet.create({
     height: 150,
     marginHorizontal: 10,
     flexWrap: "wrap",
-    
   },
   daavka: {
     flex: 1,
@@ -250,7 +347,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   uilchilgee: {
-    margin: 20,
+    margin: 10,
   },
   ug: {
     marginHorizontal: 40,
@@ -276,6 +373,27 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 20,
     margin: 25,
+  },
+
+  border: {
+    backgroundColor: "#fff",
+    borderWidth: 2,
+    borderColor: "#fff",
+    borderRadius: 20,
+    width: 150,
+    height: 150,
+    marginHorizontal: 10,
+    flexWrap: "wrap",
+  },
+  ger: {
+  },
+  guih: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  helbar: {
+    marginBottom: 10
   }
 });
 

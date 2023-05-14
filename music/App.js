@@ -33,7 +33,7 @@ export default function App() {
       }
       )}>
         <Tab.Screen name='DaavkaTunes' component={HomeScreen}/>
-        <Tab.Screen name='Дуу' component={MusicScreen}/>
+        <Tab.Screen name='Дуу' component={MusicScreen} options={{title: 'Бүх дуу'}}/>
         <Tab.Screen name='Таалагдсан' component={LikeScreen}/>
       </Tab.Navigator>
     </NavigationContainer>
