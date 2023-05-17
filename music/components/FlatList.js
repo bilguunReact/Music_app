@@ -1,81 +1,122 @@
-import { StyleSheet, Text, View, FlatList, SafeAreaView, TouchableOpacity, Alert } from 'react-native'
-import React from 'react'
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  SafeAreaView,
+  TouchableOpacity,
+  Alert,
+  Image,
+} from "react-native";
+import React from "react";
 
-import Search from '../components/Search'
-import { ScrollView } from 'react-native'
+import Search from "../components/Search";
+import { ScrollView } from "react-native";
 
 const MusicScreen = () => {
   const songs = [
-    {id:'1', name:'Be my summer'},
-    {id:'2', name:'bi'},
-    {id:'3', name:'Chi'},
-    {id:'4', name:'Good'},
-    {id:'5', name:'Dell'},
-    {id:'6', name:'Iphone'},
-    {id:'7', name:'Sumsung'},
-    {id:'1', name:'Be my summer'},
-    {id:'2', name:'bi'},
-    {id:'3', name:'Chi'},
-    {id:'4', name:'Good'},
-    {id:'5', name:'Dell'},
-    {id:'6', name:'Iphone'},
-    {id:'7', name:'Sumsung'},
-    {id:'1', name:'Be my summer'},
-    {id:'2', name:'bi'},
-    {id:'3', name:'Chi'},
-    {id:'4', name:'Good'},
-    {id:'5', name:'Dell'},
-    {id:'6', name:'Iphone'},
-    {id:'7', name:'Sumsung'},
-    {id:'1', name:'Be my summer'},
-    {id:'2', name:'bi'},
-    {id:'3', name:'Chi'},
-    {id:'4', name:'Good'},
-    {id:'5', name:'Dell'},
-    {id:'6', name:'Iphone'},
-    {id:'7', name:'Sumsung'},
-    {id:'1', name:'Be my summer'},
-    {id:'2', name:'bi'},
-    {id:'3', name:'Chi'},
-    {id:'4', name:'Good'},
-    {id:'5', name:'Dell'},
-    {id:'6', name:'Iphone'},
-    {id:'7', name:'Sumsung'},
-  ]
-      return (
-        <SafeAreaView>
-        <View>
-          <Search/>
+    { id: "1", name: "Be my summer" },
+    { id: "2", name: "bi" },
+  ];
+  const songss = [{ id: "3", name: "Улаанбаатар гунигтай" }];
+  return (
+    <SafeAreaView>
+      <View>
+        <Search />
+      </View>
+      <ScrollView>
+        <View style={styles.Tom}>
+          <View style={styles.duuchin}>
+            <Image
+              style={styles.duucinZurag}
+              source={require("../assets/Six-1200-200522.png")}
+            />
+            <Text style={styles.duuchinNer}>290</Text>
           </View>
-          <ScrollView>
-            <View>
 
+          <FlatList
+            style={styles.Flattlist}
+            data={songs}
+            renderItem={(element) => (
+              <TouchableOpacity onPress={() => Alert.alert("Ok")}>
+                <View style={styles.flatBorder}>
+                  <Text> {element.item.id} </Text>
+                  <Text style={styles.name} >               {element.item.name}</Text>
+                </View>
+              </TouchableOpacity>
+            )}
+          />
 
-          <FlatList data={songs} renderItem={element => (
-          <TouchableOpacity onPress={() => Alert.alert('Ok')}>
-          <View style={styles.flatBorder}>
-            <Text>{element.item.name}</Text></View>
-            
-            </TouchableOpacity>)}/>
-
-
+          <View style={styles.duuchinn}>
+            <Image
+              style={styles.duucinZurag}
+              source={require("../assets/Six-1200-200522.png")}
+            />
+            <Text style={styles.duuchinNer}>290 & 168</Text>
           </View>
-          </ScrollView>
-          </SafeAreaView>
-        
-    
-      )
-    }
-    
-export default MusicScreen
-    
+
+          <FlatList
+            style={styles.Flattlist}
+            data={songss}
+            renderItem={(element) => (
+              <TouchableOpacity onPress={() => Alert.alert("Ok")}>
+                <View style={styles.flatBorder}>
+                  <Text> {element.item.name}</Text>
+                </View>
+              </TouchableOpacity>
+            )}
+          />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+export default MusicScreen;
+
 const styles = StyleSheet.create({
-      flatBorder: {
-        flex: 1,
-        backgroundColor: 'gray',
-        padding: 15,
-        margin: 5,
-        top: 20,
-        marginHorizontal: 17,
-      }
-    })
+  flatBorder: {
+    flex: 1,
+    backgroundColor: "#F5FFFA",
+    padding: 15,
+    margin: 1,
+    height: 50,
+    flexDirection: 'row',
+  },
+  duuchin: {
+    flex: 1,
+    width: 374,
+    height: 50,
+    backgroundColor: "#F5FFFA",
+    padding: 6,
+    flexDirection: "row",
+  },
+  duucinZurag: {
+    width: 40,
+    height: 40,
+    marginEnd: 5,
+    marginBottom: 3,
+  },
+  duuchinNer: {
+    color: "black",
+    fontSize: 15,
+    marginLeft: 5,
+    marginTop: 14,
+  },
+  Tom: {
+    top: 50,
+  },
+  
+  duuchinn: {
+    flex: 1,
+    width: 374,
+    height: 50,
+    backgroundColor: "#F5FFFA",
+    padding: 6,
+    flexDirection: "row",
+    top: 20,
+  },
+  name: {
+    color: 'red',
+  }
+});
