@@ -133,8 +133,9 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
 
-     
+          <View style={styles.mmmmm}>
         <Text style={styles.uilchilgee}>Шинээр нэмэгдсэн</Text>
+        </View>
         <ScrollView style={styles.helbar} horizontal={true}>
         
           <TouchableOpacity style={styles.aaa}>
@@ -202,8 +203,9 @@ const HomeScreen = () => {
               </View>
           </TouchableOpacity>
         </ScrollView>
-
+          <View style={styles.mmmmm}>
         <Text style={styles.uilchilgee}>Урсгал, төрөл</Text>
+        </View>
         <ScrollView style={styles.helbar} horizontal={true}>
         
           <TouchableOpacity style={styles.aaa}>
@@ -308,23 +310,24 @@ const styles = StyleSheet.create({
   icooon: {
     width: 30,
     height: 30,
-    borderRadius: 10,
+    borderRadius: 5,
     borderWidth: 1,
     borderColor: "yellow",
     textAlign: "center",
+    alignItems: "center",
     marginHorizontal: 60,
-    // backgroundColor: 'black',
+    // backgroundColor: 'yellow',
   },
   icoon: {
     width: 30,
     height: 30,
     borderRadius: 5,
-    backgroundColor: "#F08080",
+    // backgroundColor: "#F08080",
     alignItems: "center",
     textAlign: "center",
     marginHorizontal: 60,
-    borderColor: "black",
     borderWidth: 1,
+    borderColor: "#F08080",
   },
   dood: {
     flexDirection: "row",
@@ -347,7 +350,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   uilchilgee: {
-    margin: 10,
+    top: -20,
   },
   ug: {
     marginHorizontal: 40,
@@ -394,6 +397,10 @@ const styles = StyleSheet.create({
   },
   helbar: {
     marginBottom: 10
+  },
+  mmmmm: {
+    marginBottom: -50,
+    marginLeft: -5,
   }
 });
 
