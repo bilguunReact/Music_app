@@ -9,11 +9,12 @@ import {
   Image,
 } from "react-native";
 import React from "react";
-
+import { StatusBar } from "expo-status-bar";
 import Search from "../components/Search";
 import { ScrollView } from "react-native";
+import Duu from "./Duu";
 
-const MusicScreen = () => {
+const MusicScreen = ({navigation}) => {
   const songs = [
     { id: "1", name: "Be my summer" },
     { id: "2", name: "bi" },
@@ -38,7 +39,7 @@ const MusicScreen = () => {
             style={styles.Flattlist}
             data={songs}
             renderItem={(element) => (
-              <TouchableOpacity onPress={() => Alert.alert("Ok")}>
+              <TouchableOpacity onPress={() => navigation.navigate(Duu)}>
                 <View style={styles.flatBorder}>
                   <Text> {element.item.id} </Text>
                   <Text style={styles.name} >               {element.item.name}</Text>
@@ -66,6 +67,7 @@ const MusicScreen = () => {
               </TouchableOpacity>
             )}
           />
+          <StatusBar style="auto"/>
         </View>
       </ScrollView>
     </SafeAreaView>

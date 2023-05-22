@@ -13,7 +13,8 @@ import Carousel from "react-native-snap-carousel";
 import Onboarding from "react-native-onboarding-swiper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
-
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const HomeScreen = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = useRef(null);

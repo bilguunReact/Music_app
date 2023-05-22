@@ -8,6 +8,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MusicScreen from './screens/MusicScreen';
 import LikeScreen from './screens/LikeScreen';
 import HomeScreen from './screens/HomeScreen';
+import Duu from './components/Duu';
+import DuuScreen from './screens/DuuScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,6 +17,7 @@ export default function App() {
  
   return (
     <NavigationContainer>
+      
       <Tab.Navigator  screenOptions={({route}) => ({
         tabBarIcon: ({focused, size, colour}) =>{
           let iconName;
