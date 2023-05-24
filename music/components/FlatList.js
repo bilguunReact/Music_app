@@ -12,7 +12,7 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import Search from "../components/Search";
 import { ScrollView } from "react-native";
-import Duu from "./Duu";
+import DuuScreen from "../screens/DuuScreen";
 
 const MusicScreen = ({navigation}) => {
   const songs = [
@@ -39,7 +39,7 @@ const MusicScreen = ({navigation}) => {
             style={styles.Flattlist}
             data={songs}
             renderItem={(element) => (
-              <TouchableOpacity onPress={() => navigation.navigate(Duu)}>
+              <TouchableOpacity onPress={() => navigation.navigate('DuuScreen')}>
                 <View style={styles.flatBorder}>
                   <Text> {element.item.id} </Text>
                   <Text style={styles.name} >               {element.item.name}</Text>

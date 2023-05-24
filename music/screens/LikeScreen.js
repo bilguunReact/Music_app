@@ -1,6 +1,7 @@
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import Search from '../components/Search';
+import FlatList from '../components/FlatList';
 
 export default function LikeScreen() {
   return (

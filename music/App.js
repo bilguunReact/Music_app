@@ -2,16 +2,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import Ionic from 'react-native-vector-icons/Ionicons/';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { NavigationContainer, TabActions } from '@react-navigation/native';
+import { NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import MusicScreen from './screens/MusicScreen';
 import LikeScreen from './screens/LikeScreen';
 import HomeScreen from './screens/HomeScreen';
-import Duu from './components/Duu';
 import DuuScreen from './screens/DuuScreen';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
  
@@ -40,6 +41,7 @@ export default function App() {
         <Tab.Screen name='Таалагдсан' component={LikeScreen}/>
       </Tab.Navigator>
     </NavigationContainer>
+    
   )
 }
 

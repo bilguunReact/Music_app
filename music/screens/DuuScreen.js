@@ -3,7 +3,9 @@ import React from 'react'
 
 const DuuScreen = ({}) => {
   return (
-   <Duu/>
+   <View>
+    <Text>vbhjk</Text>
+   </View>
   )
 }
 
